@@ -10,13 +10,13 @@ import { Article } from '../article';
 })
 export class HomeComponent implements OnInit {
 
-  articles : Array<Article>;
+  articles: Array<Article>;
 
-  constructor( private __articleService : ArticleService ) { }
+  constructor(private __articleService: ArticleService) { }
 
   ngOnInit() {
     this.__articleService.getArticles()
-    .subscribe(res=>this.articles = res);
+      .subscribe(res => this.articles = res);
   }
 
 }
