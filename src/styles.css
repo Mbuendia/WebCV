@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body{
+    padding:0px;
+    margin:0px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding-left:20px;
+  padding-right:20px;
+}
+
+.form-container > * {
+  width: 100%;
+}
