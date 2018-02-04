@@ -4,7 +4,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { HttpModule } from '@angular/http';
-import { environment } from './../environments/environment';
+import { environment } from './../environments/environment.prod';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material';
 import {MatCheckboxModule} from '@angular/material';
@@ -35,6 +35,7 @@ import { HeaderComponent } from './header/header.component';
 import { ArticleService } from './article.service';
 import { ArticleComponent } from './article/article.component';
 import { CreateComponent } from './create/create.component';
+import { FirebasecvListComponent } from './firebase/firebasecv-list.component';
 
 
 
@@ -44,7 +45,8 @@ import { CreateComponent } from './create/create.component';
     HomeComponent,
     HeaderComponent,
     ArticleComponent,
-    CreateComponent
+    CreateComponent,
+    FirebasecvListComponent
   ],
   imports: [
     BrowserModule,
