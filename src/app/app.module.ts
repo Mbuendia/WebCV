@@ -21,7 +21,7 @@ import {MatButtonModule} from '@angular/material';
 import {MatNativeDateModule} from '@angular/material';
 import {MatIconModule} from '@angular/material';
 import {MatProgressBarModule} from '@angular/material';
-
+import { MomentModule } from 'angular2-moment';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -51,6 +51,7 @@ import { FirebasecvListComponent } from './firebase/firebasecv-list.component';
   ],
   imports: [
     BrowserModule,
+    MomentModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatCheckboxModule,

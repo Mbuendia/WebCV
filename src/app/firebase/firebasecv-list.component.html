@@ -4,7 +4,7 @@
           <mat-card-header>
               <div mat-card-avatar class="cv-header-image"></div>
               <mat-card-title>{{cv.Nombre}} {{cv.Apellidos}}</mat-card-title>
-              <mat-card-subtitle>{{cv.Fecha_Nacimiento}}</mat-card-subtitle>
+              <mat-card-subtitle>Born {{cv.Fecha_Nacimiento | amTimeAgo}}</mat-card-subtitle>
             </mat-card-header>
   </mat-card>
   <mat-card class="cv-card">
