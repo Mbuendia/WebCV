@@ -14,7 +14,7 @@ const routes: Routes = [
     component: ArticleComponent
   },
   {
-    path: 'create',
+    path: 'contact',
     component: CreateComponent
   },
   {
