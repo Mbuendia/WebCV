@@ -1,0 +1,8 @@
+.cv-card {
+    max-width: 100%;
+  }
+  
+  .cv-header-image {
+    background-image: url('https://lh3.googleusercontent.com/a2-TD2446w_T93ly-J7ck_4lcjAWzxksnX6lPeqUEea__qLIDPlCHKAyDx0mRtJwADCagVObHxMUQk4=w2880-h1606');
+    background-size: cover;
+  }

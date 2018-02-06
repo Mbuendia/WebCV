@@ -1,9 +1,19 @@
-<ul>
-  <div *ngFor="let course of coursesObservable | async">
-          <h3><a href="#">{{course.nombre}}</a> </h3>
-          <p>{{course.apellidos}}</p>
-          <div>
-              <a href="{{course.edad}}" target="_blank" class="btn btn-danger">Go To Course</a>
-          </div>
+
+  <div *ngFor="let cv of cvObservable | async">
+      <mat-card class="cv-card">
+          <mat-card-header>
+              <div mat-card-avatar class="cv-header-image"></div>
+              <mat-card-title>{{cv.Nombre}} {{cv.Apellidos}}</mat-card-title>
+              <mat-card-subtitle>{{cv.Fecha_Nacimiento}}</mat-card-subtitle>
+            </mat-card-header>
+  </mat-card>
+  <mat-card class="cv-card">
+  <h3>Skills </h3>
+  <mat-card-content>
+      <div *ngFor="let skills of cv.Conocimientos">
+          <span>{{skills.Nombre}}</span>
+          <mat-progress-bar mode="determinate" value={{skills.Value}}></mat-progress-bar>
+      </div>
+    </mat-card-content>
+  </mat-card>
   </div>
-</ul>

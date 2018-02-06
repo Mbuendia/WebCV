@@ -4,17 +4,16 @@ import { Observable } from 'rxjs/Observable';
 @Component({
   selector: 'firebasecv-list',
   templateUrl: 'firebasecv-list.component.html',
-  styles: []
+  styleUrls: ['./firebasecv-list.component.css']
 })
 export class FirebasecvListComponent implements OnInit {
-  coursesObservable: Observable<any[]>;
+  cvObservable: Observable<any[]>;
   constructor(private db: AngularFireDatabase) {
   }
   ngOnInit() {
-    console.log('hola');
-    this.coursesObservable = this.getCourses('/CV');
+    this.cvObservable = this.getCV('/');
   }
-  getCourses(listPath): Observable<any[]> {
+  getCV(listPath): Observable<any[]> {
     return this.db.list(listPath).valueChanges();
   }
 }

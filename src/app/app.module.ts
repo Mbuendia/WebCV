@@ -20,6 +20,7 @@ import {MatTabsModule} from '@angular/material';
 import {MatButtonModule} from '@angular/material';
 import {MatNativeDateModule} from '@angular/material';
 import {MatIconModule} from '@angular/material';
+import {MatProgressBarModule} from '@angular/material';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -65,6 +66,7 @@ import { FirebasecvListComponent } from './firebase/firebasecv-list.component';
     MatButtonModule,
     MatNativeDateModule,
     MatIconModule,
+    MatProgressBarModule,
     HttpModule,
     AppRoutingModule,
     FormsModule, ReactiveFormsModule,
