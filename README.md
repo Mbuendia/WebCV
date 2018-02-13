@@ -1,4 +1,4 @@
-# CV WEb
+# CV WEB WITH ANGULAR 5 AND FIREBASE
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
