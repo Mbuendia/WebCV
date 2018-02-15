@@ -1,19 +1,46 @@
+<div *ngFor="let cv of cvObservable | async">
+    <mat-card class="cv-card">
+        <mat-card-header>
+            <div mat-card-avatar class="cv-header-image"></div>
+            <mat-card-title>{{cv.Nombre}} {{cv.Apellidos}}</mat-card-title>
+            <mat-card-subtitle>Born {{cv.Fecha_Nacimiento | amTimeAgo}}</mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>
+    <mat-card class="cv-card">
+        <h3>Skills </h3>
+        <mat-card-content>
+            <div *ngFor="let skills of cv.Conocimientos">
+                <span>{{skills.Nombre}}</span>
+                <mat-progress-bar mode="determinate" value={{skills.Value}}></mat-progress-bar>
+            </div>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="cv-card">
+        <h3>Experiencies </h3>
+        <mat-card-content>
+            <mat-accordion>
+                <div *ngFor="let exp of cv.Experiencies">
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                {{exp.Company}}
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                {{exp.Fecha_Init}} - {{exp.Fecha_End}}
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <p>{{exp.Desc}}</p>
+                        <mat-chip-list *ngFor="let tech of exp.Tech_used" aria-orientation="vertical" class="chip-vertical">
+                                <mat-chip>{{tech.Nombre}}</mat-chip>
+                        </mat-chip-list>
+                    </mat-expansion-panel>
+                </div>
+            </mat-accordion>
 
-  <div *ngFor="let cv of cvObservable | async">
-      <mat-card class="cv-card">
-          <mat-card-header>
-              <div mat-card-avatar class="cv-header-image"></div>
-              <mat-card-title>{{cv.Nombre}} {{cv.Apellidos}}</mat-card-title>
-              <mat-card-subtitle>Born {{cv.Fecha_Nacimiento | amTimeAgo}}</mat-card-subtitle>
-            </mat-card-header>
-  </mat-card>
-  <mat-card class="cv-card">
-  <h3>Skills </h3>
-  <mat-card-content>
-      <div *ngFor="let skills of cv.Conocimientos">
-          <span>{{skills.Nombre}}</span>
-          <mat-progress-bar mode="determinate" value={{skills.Value}}></mat-progress-bar>
-      </div>
-    </mat-card-content>
-  </mat-card>
-  </div>
+        </mat-card-content>
+
+
+    </mat-card>
+
+
+</div>

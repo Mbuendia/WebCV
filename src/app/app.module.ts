@@ -23,8 +23,9 @@ import {MatIconModule} from '@angular/material';
 import {MatProgressBarModule} from '@angular/material';
 import { MomentModule } from 'angular2-moment';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatChipsModule} from '@angular/material/chips';
 
 import 'hammerjs';
 
@@ -65,7 +66,10 @@ import { FirebasecvListComponent } from './firebase/firebasecv-list.component';
     MatCardModule,
     MatTabsModule,
     MatButtonModule,
+    MatExpansionModule,
     MatNativeDateModule,
+    MatDividerModule,
+    MatChipsModule,
     MatIconModule,
     MatProgressBarModule,
     HttpModule,
