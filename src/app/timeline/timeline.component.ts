@@ -10,12 +10,18 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class TimelineComponent implements OnInit {
   @Input() expArr: string;
+  show: boolean = true;
 
   constructor( ) { }
 
   ngOnInit() {
-   
   }
+  showchips(){
+    this.show = !this.show;
+  }
+ handleClick($event, i){
+   alert(i);
+ }
 
 
       
