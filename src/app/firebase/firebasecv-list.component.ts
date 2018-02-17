@@ -16,4 +16,5 @@ export class FirebasecvListComponent implements OnInit {
   getCV(listPath): Observable<any[]> {
     return this.db.list(listPath).valueChanges();
   }
+
 }

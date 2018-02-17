@@ -1,0 +1,23 @@
+
+<mat-card class="cv-card">
+    <div class="container">
+        <div class="steps-timeline" >
+
+            <div class="step" *ngFor="let exp of expArr">
+              <div class="step-milestone"></div>
+              <span class="step-title">
+                  {{exp.Fecha_Init}} <br>  {{exp.Company}}
+              </span>
+              <p class="step-description">{{exp.Desc}}</p>
+                <mat-chip-list *ngFor="let tech of exp.Tech_used" aria-orientation="vertical" class="chip-vertical">
+                        <mat-chip>{{tech.Nombre}}</mat-chip>
+                </mat-chip-list>
+            </div>
+          
+           
+          
+          </div>
+            
+    </div>
+   
+</mat-card>

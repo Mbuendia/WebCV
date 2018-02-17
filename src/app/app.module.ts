@@ -38,6 +38,7 @@ import { ArticleService } from './article.service';
 import { ArticleComponent } from './article/article.component';
 import { CreateComponent } from './create/create.component';
 import { FirebasecvListComponent } from './firebase/firebasecv-list.component';
+import { TimelineComponent  } from './timeline/timeline.component';
 
 
 
@@ -48,7 +49,8 @@ import { FirebasecvListComponent } from './firebase/firebasecv-list.component';
     HeaderComponent,
     ArticleComponent,
     CreateComponent,
-    FirebasecvListComponent
+    FirebasecvListComponent,
+    TimelineComponent
   ],
   imports: [
     BrowserModule,

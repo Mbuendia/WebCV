@@ -17,30 +17,9 @@
     </mat-card>
     <mat-card class="cv-card">
         <h3>Experiencies </h3>
-        <mat-card-content>
-            <mat-accordion>
-                <div *ngFor="let exp of cv.Experiencies">
-                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-                        <mat-expansion-panel-header>
-                            <mat-panel-title>
-                                {{exp.Company}}
-                            </mat-panel-title>
-                            <mat-panel-description>
-                                {{exp.Fecha_Init}} - {{exp.Fecha_End}}
-                            </mat-panel-description>
-                        </mat-expansion-panel-header>
-                        <p>{{exp.Desc}}</p>
-                        <mat-chip-list *ngFor="let tech of exp.Tech_used" aria-orientation="vertical" class="chip-vertical">
-                                <mat-chip>{{tech.Nombre}}</mat-chip>
-                        </mat-chip-list>
-                    </mat-expansion-panel>
-                </div>
-            </mat-accordion>
-
-        </mat-card-content>
+        <app-timeline [expArr]="cv.Experiencies"></app-timeline>
 
 
     </mat-card>
-
 
 </div>
