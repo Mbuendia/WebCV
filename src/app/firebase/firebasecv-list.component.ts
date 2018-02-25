@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 @Component({
   selector: 'firebasecv-list',
   templateUrl: 'firebasecv-list.component.html',
-  styleUrls: ['./firebasecv-list.component.css']
+  styleUrls: ['./firebasecv-list.component.scss']
 })
 export class FirebasecvListComponent implements OnInit {
   cvObservable: Observable<any[]>;

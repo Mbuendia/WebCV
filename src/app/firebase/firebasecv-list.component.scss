@@ -1,0 +1,23 @@
+.cv-card {
+    max-width: 100%;
+  }
+  
+  .cv-header-image {
+     background-size: cover;
+     background-image: url('../../assets/me_photo.jpg');
+  }
+  .skills-grid{
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    div{
+      padding: 10px
+    }	
+  }
+  @media screen and (max-width: 678px) {
+    .skills-grid{
+      grid-template-columns: 50% 50%;
+    }
+  
+  
+  }
+  

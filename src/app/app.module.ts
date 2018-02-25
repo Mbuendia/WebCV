@@ -5,27 +5,13 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { HttpModule } from '@angular/http';
 import { environment } from './../environments/environment.prod';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatToolbarModule} from '@angular/material';
-import {MatCheckboxModule} from '@angular/material';
-import {MatDatepickerModule} from '@angular/material';
-import {MatFormFieldModule} from '@angular/material';
-import {MatInputModule} from '@angular/material';
-import {MatRadioModule} from '@angular/material';
-import {MatSelectModule} from '@angular/material';
-import {MatListModule} from '@angular/material';
-import {MatGridListModule} from '@angular/material';
-import {MatCardModule} from '@angular/material';
-import {MatTabsModule} from '@angular/material';
-import {MatButtonModule} from '@angular/material';
-import {MatNativeDateModule} from '@angular/material';
-import {MatIconModule} from '@angular/material';
-import {MatProgressBarModule} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule, MatCheckboxModule, MatDatepickerModule, MatFormFieldModule, MatInputModule, MatRadioModule, MatSelectModule, MatListModule, MatGridListModule, MatCardModule, MatTabsModule, MatButtonModule, MatNativeDateModule, MatIconModule, MatDialogModule, MatProgressBarModule } from '@angular/material';
 import { MomentModule } from 'angular2-moment';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatChipsModule} from '@angular/material/chips';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatChipsModule } from '@angular/material/chips';
 
 import 'hammerjs';
 
@@ -33,12 +19,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
-
+import { DialogComponent } from './dialog/dialog.component';
 import { ArticleService } from './article.service';
 import { ArticleComponent } from './article/article.component';
 import { CreateComponent } from './create/create.component';
 import { FirebasecvListComponent } from './firebase/firebasecv-list.component';
-import { TimelineComponent  } from './timeline/timeline.component';
+import { TimelineComponent } from './timeline/timeline.component';
 
 
 
@@ -49,8 +35,13 @@ import { TimelineComponent  } from './timeline/timeline.component';
     HeaderComponent,
     ArticleComponent,
     CreateComponent,
+    DialogComponent,
     FirebasecvListComponent,
     TimelineComponent
+  ],
+
+  entryComponents: [
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -66,6 +57,7 @@ import { TimelineComponent  } from './timeline/timeline.component';
     MatListModule,
     MatGridListModule,
     MatCardModule,
+    MatDialogModule,
     MatTabsModule,
     MatButtonModule,
     MatExpansionModule,

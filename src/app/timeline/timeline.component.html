@@ -10,16 +10,15 @@
             (mouseleave)="showchips()">
               <div class="step-milestone" 
               (click)='handleClick($event, i)'></div>
+              <span class="step-title date">
+                    {{exp.Fecha_Init | amLocale:'en' | amDateFormat:'MMMM YYYY'}}  to {{exp.Fecha_End | amLocale:'en' | amDateFormat:'MMMM YYYY'}} 
+            </span>
               <span class="step-title">
-                  {{exp.Fecha_Init}} <br>  {{exp.Company}}
+                    
+                   {{exp.Company}}
               </span>
               <p class="step-description">{{exp.Desc}}</p>
-              
-              <div [ngClass]="(this.show) ? 'chip-container' : 'chip-container  active'" >
-                <mat-chip-list *ngFor="let tech of exp.Tech_used" aria-orientation="vertical"  class="chip-vertical"> 
-                        <mat-chip>{{tech.Nombre}}</mat-chip>
-                </mat-chip-list>
-              </div>
+             
             </div>
           </div>  
     </div>

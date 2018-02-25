@@ -6,20 +6,20 @@
             <mat-card-subtitle>Born {{cv.Fecha_Nacimiento | amTimeAgo}}</mat-card-subtitle>
         </mat-card-header>
     </mat-card>
+    
+    <mat-card class="cv-card">
+        <h3>Experiencies </h3>
+        <app-timeline [expArr]="cv.Experiencies"></app-timeline>
+    </mat-card>
+
     <mat-card class="cv-card">
         <h3>Skills </h3>
-        <mat-card-content>
+        <mat-card-content class="skills-grid">
             <div *ngFor="let skills of cv.Conocimientos">
                 <span>{{skills.Nombre}}</span>
                 <mat-progress-bar mode="determinate" value={{skills.Value}}></mat-progress-bar>
             </div>
         </mat-card-content>
-    </mat-card>
-    <mat-card class="cv-card">
-        <h3>Experiencies </h3>
-        <app-timeline [expArr]="cv.Experiencies"></app-timeline>
-
-
     </mat-card>
 
 </div>
