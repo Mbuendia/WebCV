@@ -6,7 +6,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { HttpModule } from '@angular/http';
 import { environment } from './../environments/environment.prod';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule, MatCheckboxModule, MatDatepickerModule, MatFormFieldModule, MatInputModule, MatRadioModule, MatSelectModule, MatListModule, MatGridListModule, MatCardModule, MatTabsModule, MatButtonModule, MatNativeDateModule, MatIconModule, MatDialogModule, MatProgressBarModule } from '@angular/material';
+import { MatToolbarModule, MatCheckboxModule, MatDatepickerModule, MatFormFieldModule, MatInputModule, MatRadioModule, MatSelectModule, MatListModule, MatGridListModule, MatCardModule, MatTabsModule, MatButtonModule, MatNativeDateModule, MatIconModule, MatDialogModule, MatProgressBarModule} from '@angular/material';
 import { MomentModule } from 'angular2-moment';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
