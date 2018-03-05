@@ -22,7 +22,7 @@ import { HeaderComponent } from './header/header.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { ArticleService } from './article.service';
 import { ArticleComponent } from './article/article.component';
-import { CreateComponent } from './create/create.component';
+import { ProjectsComponent } from './projects/projects.component';
 import { FirebasecvListComponent } from './firebase/firebasecv-list.component';
 import { TimelineComponent } from './timeline/timeline.component';
 
@@ -34,7 +34,7 @@ import { TimelineComponent } from './timeline/timeline.component';
     HomeComponent,
     HeaderComponent,
     ArticleComponent,
-    CreateComponent,
+    ProjectsComponent,
     DialogComponent,
     FirebasecvListComponent,
     TimelineComponent
@@ -73,7 +73,7 @@ import { TimelineComponent } from './timeline/timeline.component';
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [ArticleService],
+  providers: [ArticleService, FirebasecvListComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

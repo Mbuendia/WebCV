@@ -1,0 +1,20 @@
+
+<mat-card>
+  <mat-card-content>
+    Projects
+  </mat-card-content>
+</mat-card>
+<div *ngFor="let project of listProjects | async">
+  <mat-card class="project-card">
+    <mat-card-header>
+      <img mat-card-avatar class="project-header-image" src="{{project.Logo || 'https://via.placeholder.com/350x350'}}"/>
+      <mat-card-title>{{project.Name}}</mat-card-title>
+      <mat-card-subtitle>{{project.Rol}}</mat-card-subtitle>
+    </mat-card-header>
+     <mat-card-content>
+      <p>
+        {{project.Description}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -11,9 +11,9 @@ export class FirebasecvListComponent implements OnInit {
   constructor(private db: AngularFireDatabase) {
   }
   ngOnInit() {
-    this.cvObservable = this.getCV('/');
+    this.cvObservable = this.getPath('/');
   }
-  getCV(listPath): Observable<any[]> {
+  getPath(listPath): Observable<any[]> {
     return this.db.list(listPath).valueChanges();
   }
 
