@@ -23,7 +23,7 @@
         <mat-card-content class="skills-grid">
             <div *ngFor="let skills of cv.Conocimientos">
                 <span>{{skills.Nombre}}</span>
-                <mat-progress-bar mode="determinate" value={{skills.Value}}></mat-progress-bar>
+                <mat-progress-bar mode="determinate" class="mycolor" value={{skills.Value}}></mat-progress-bar>
             </div>
         </mat-card-content>
     </mat-card>

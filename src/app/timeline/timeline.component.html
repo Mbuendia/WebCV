@@ -5,7 +5,6 @@
     </mat-card-header>
     <div class="container">
         <div class="steps-timeline" >
-
             <div class="step" *ngFor="let exp of expArr; let i = index" [attr.data-index]="i" (mouseenter)="showchips()" 
             (mouseleave)="showchips()">
               <div class="step-milestone" 
@@ -14,11 +13,9 @@
                     {{exp.Fecha_Init | amLocale:'en' | amDateFormat:'MMMM YYYY'}}  to {{exp.Fecha_End | amLocale:'en' | amDateFormat:'MMMM YYYY'}} 
             </span>
               <span class="step-title">
-                    
                    {{exp.Company}}
               </span>
               <p class="step-description">{{exp.Desc}}</p>
-             
             </div>
           </div>  
     </div>

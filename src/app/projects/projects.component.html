@@ -15,6 +15,13 @@
       <p>
         {{project.Description}}
       </p>
+      <div *ngIf="!!project.Links">
+          <h4>Project links</h4>
+          <div *ngFor="let links of project.Links" class="link">
+             <a href="{{links.link}}">{{links.link}}</a>
+          </div>
+      </div>
+      
     </mat-card-content>
   </mat-card>
 </div>

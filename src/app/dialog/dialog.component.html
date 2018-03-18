@@ -1,7 +1,5 @@
-<h1 mat-dialog-title>Long Description</h1>
+<h1 mat-dialog-title>Techs Used</h1>
 <div mat-dialog-content class="dialog-container">
-   <span>{{data.selected.Desc}}</span> 
-    <h2>Techs Used</h2>
     <mat-chip-list *ngFor="let tech of data.selected.Tech_used" aria-orientation="horizontal" 
     class="chip-vertical"> 
             <mat-chip>{{tech.Nombre}}</mat-chip>
