@@ -1,0 +1,63 @@
+
+.cv-card {
+    max-width: 100%;
+  
+  }
+  
+  .cv-header-image {
+     background-size: cover;
+     background-image: url('../../assets/me_photo.jpg');
+  }
+  .skills-grid{
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    div{
+      padding: 10px
+    }	
+  }
+  @media screen and (max-width: 678px) {
+    .skills-grid{
+      grid-template-columns: 50% 50%;
+    }
+    .cv-card {
+    max-width: 100%;
+    
+  }
+  
+  }
+  .conecting-container{
+    display: flex;
+    align-items: baseline;
+    align-self: center;
+    mat-card-subtitle{
+
+    padding: 0 10px;
+      a{
+        text-decoration: none;
+        
+      }
+      a, a:visited, a:hover, a:active {
+        color: inherit;
+      }
+    }
+     .email{
+      justify-content: center;
+      .material-icons{
+        color: rgb(187, 80, 80);
+      } 
+    }
+     .phone{
+      justify-content: center;
+      .material-icons{
+        color:  rgb(96, 170, 90);
+      } 
+    }
+    .linkedin{
+      justify-content: center;
+      .material-icons{
+        color: #0077b5;
+      } 
+    }
+
+  }
+  

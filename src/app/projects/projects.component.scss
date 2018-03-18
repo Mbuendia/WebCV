@@ -1,0 +1,18 @@
+  
+  .project-card {
+    max-height: 400px;
+    
+  }
+  
+  .project-header-image {
+    background-size: cover;
+  }
+   
+  mat-card-header .project-header-image.mat-card-avatar {
+    height: 4em;
+    width: 4em;
+    margin-bottom: 1em;
+  }
+  .link{
+    word-wrap: break-word;
+  }

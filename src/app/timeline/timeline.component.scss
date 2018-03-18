@@ -1,7 +1,12 @@
-body{
-  color: #666;
-  font-family: Arial, sans-serif;
+@mixin transition($duration) {
+  -webkit-transition: $duration;
+  -moz-transition: $duration;
+  -ms-transition: $duration;
+  -o-transition: $duration;
+  transition: $duration;
 }
+
+  
 
 h1{
   text-align: center;
@@ -17,23 +22,25 @@ h1{
   margin: 0;
   display: block;
   text-align: center;
+  font-size: 12px;
+
+  overflow: hidden;
+  line-height:20px;
+}
+.date{
+  font-size: 10px;
 }
 
 .step-title{
-  font-size: 16px;
+  font-size: 14px;
   line-height: 22px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.ste-description {
-  overflow: hidden;
-  line-height:20px;
-}
-
 .steps-timeline .step {
   outline: 1px dashed rgba(0, 128, 0, 0);
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 
@@ -42,16 +49,24 @@ h1{
   width: 30px;
   height: 30px;
   background-color: #fff;
-  border: 8px solid red;
+  border: 8px solid #3498DB;
   border-radius: 50%;
-  margin: 15px auto;
+  margin: 10px auto;
   box-sizing: border-box;
+  &:hover{
+    width: 40px;
+    height: 40px;
+    margin: 5px auto;
+    border: 8px solid green;
+    transition: .2s cubic-bezier(0.4, 0, 1, 1);
+  }
 }
 
 @media screen and (max-width: 678px) {
   .steps-timeline {
     border-left: 2px solid #3498DB;
     margin-left: 25px;
+    padding-bottom: 20px;
   }
 
   .steps-timeline  .step {
@@ -69,9 +84,20 @@ h1{
   .step-title,.step-description {
     text-align: left;
     margin-left: 60px;
+    font-size: 14px;
   }
 
 
+}
+.hide-info{
+  visibility:hidden;
+  opacity:0;
+  transition:opacity 0.5s linear;
+}
+.show-info{
+  visibility:visible;
+  opacity:1;
+  transition:opacity 0.5s linear;
 }
 @media screen and (min-width: 678px) {
 
@@ -80,6 +106,7 @@ h1{
     margin-top: 50px;
     margin-left: 10%;
     margin-right: 10%;
+    padding-bottom: 20px;
     display: -moz-box;
     display: -ms-flexbox;
     display: -moz-flex;
@@ -93,6 +120,7 @@ h1{
     -webkit-flex: 1;  /* Safari 6.1+ */
     -ms-flex: 1;  /* IE 10 */    
     flex: 1;
+    cursor: pointer;
   }
 
 }

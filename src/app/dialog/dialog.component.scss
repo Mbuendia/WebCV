@@ -1,0 +1,18 @@
+.dialog-container{
+    padding: 1em;
+}
+.chip-vertical{
+    margin-top: 1em;
+    display: -webkit-inline-flex;
+  
+   } 
+   .chip-container{
+    margin: 1em;
+    visibility:hidden;
+    opacity:0;
+    transition:opacity 0.5s linear;
+    &.active{
+      visibility:visible;
+      opacity:1;
+    }
+  } 	

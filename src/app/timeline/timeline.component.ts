@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewEncapsulation , Input} from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import {MatDialog} from '@angular/material';
+import { DialogComponent } from '../dialog/dialog.component';
 
 
 @Component({
@@ -9,14 +11,29 @@ import { Router, ActivatedRoute } from '@angular/router';
   encapsulation: ViewEncapsulation.None
 })
 export class TimelineComponent implements OnInit {
-  @Input() expArr: string;
+  @Input() expArr: Array<any>;
+  show: boolean = true;
 
-  constructor( ) { }
-
-  ngOnInit() {
-   
+  constructor(public dialog: MatDialog ) { 
   }
+  ngOnInit() {
 
-
+    console.log(this.expArr[this.expArr.length-1])
+    if(this.expArr[this.expArr.length-1].Fecha_End == 'Now') 
+        this.expArr[this.expArr.length-1].Fecha_End = new Date();
+  }
+  showchips(){
+    this.show = !this.show;
+  }
+  handleClick($event, i){
+    this.dialog.open(DialogComponent, {
+      data: {
+        selected: this.expArr[i],
+        show: true,
+      }
+    });
+  }
       
+
+
 }
