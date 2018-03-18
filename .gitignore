@@ -33,8 +33,7 @@
 npm-debug.log
 testem.log
 /typings
-src/environments/environment.prod.ts
-src/environments/environment.ts
+/src/environments
 
 # e2e
 /e2e/*.js
@@ -43,4 +42,3 @@ src/environments/environment.ts
 # System Files
 .DS_Store
 Thumbs.db
-
