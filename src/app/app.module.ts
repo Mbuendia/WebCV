@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { HttpModule } from '@angular/http';
 import { environment } from './../environments/environment.prod';
@@ -20,11 +21,13 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { ResumeComponent } from './resume/resume.component';
 import { ArticleService } from './article.service';
 import { ArticleComponent } from './article/article.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FirebasecvListComponent } from './firebase/firebasecv-list.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { SafePipe } from './pipes/safepipe';
 
 
 
@@ -36,8 +39,10 @@ import { TimelineComponent } from './timeline/timeline.component';
     ArticleComponent,
     ProjectsComponent,
     DialogComponent,
+    ResumeComponent,
     FirebasecvListComponent,
-    TimelineComponent
+    TimelineComponent,
+    SafePipe
   ],
 
   entryComponents: [
@@ -71,7 +76,8 @@ import { TimelineComponent } from './timeline/timeline.component';
     FormsModule, ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireStorageModule
   ],
   providers: [ArticleService, FirebasecvListComponent],
   bootstrap: [AppComponent]
