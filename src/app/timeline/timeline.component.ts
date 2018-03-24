@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation , Input} from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import {MatDialog} from '@angular/material';
+import { MatDialog } from '@angular/material';
 import { DialogComponent } from '../dialog/dialog.component';
 
 
