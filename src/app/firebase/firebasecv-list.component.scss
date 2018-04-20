@@ -3,7 +3,22 @@
     max-width: 100%;
   
   }
+  .header-cv {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: start;
+      justify-content: center;
+  }
   
+  .mat-card-avatar {
+    height: 7em;
+    width: 7em;
+    box-shadow: 3px 3px 1px 1px #888888;
+    border-radius: 50%;
+    border: rgba(0,0,0,.38) 1px solid;
+    flex-shrink: 0;
+}
   .cv-header-image {
      background-size: cover;
      background-image: url('../../assets/me_photo.jpg');
@@ -30,8 +45,9 @@
     align-items: baseline;
     align-self: center;
     mat-card-subtitle{
-
-    padding: 0 10px;
+      :first-child{
+        padding: 0 10px 0 0;
+      }
       a{
         text-decoration: none;
         
