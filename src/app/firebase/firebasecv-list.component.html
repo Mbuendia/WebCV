@@ -2,12 +2,12 @@
     <mat-card class="cv-card">
         <mat-card-header>
             <div mat-card-avatar class="cv-header-image"></div>
-            <mat-card-title>{{cv.Nombre}} {{cv.Apellidos}}</mat-card-title>
-            <mat-card-subtitle>Born {{cv.Fecha_Nacimiento | amTimeAgo}}</mat-card-subtitle>
+            <mat-card-title>{{cv.name}} {{cv.surnames}}</mat-card-title>
+            <mat-card-subtitle>Born {{cv.bornDate | amTimeAgo}}</mat-card-subtitle>
             <div class="conecting-container">
-                    <mat-card-subtitle class="phone"><a href="tel:{{cv.Phone}}"><mat-icon>phone</mat-icon></a> </mat-card-subtitle>
-                    <mat-card-subtitle class="email"><a href="mailto:{{cv.Email}}"><mat-icon>email</mat-icon></a> </mat-card-subtitle>
-                    <mat-card-subtitle class="linkedin"> <a href="{{cv.Linkedin}}" target="_blank"><mat-icon>person</mat-icon></a></mat-card-subtitle>
+                    <mat-card-subtitle class="phone"><a href="tel:{{cv.phone}}"><mat-icon>phone</mat-icon></a> </mat-card-subtitle>
+                    <mat-card-subtitle class="email"><a href="mailto:{{cv.email}}"><mat-icon>email</mat-icon></a> </mat-card-subtitle>
+                    <mat-card-subtitle class="linkedin"> <a href="{{cv.linkedin}}" target="_blank"><mat-icon>person</mat-icon></a></mat-card-subtitle>
                  </div>
         </mat-card-header>
         
@@ -15,15 +15,15 @@
     
     <mat-card class="cv-card">
         <h3>Experiencies </h3>
-        <app-timeline [expArr]="cv.Experiencies"></app-timeline>
+        <app-timeline [expArr]="cv.exp"></app-timeline>
     </mat-card>
 
     <mat-card class="cv-card">
         <h3>Skills </h3>
         <mat-card-content class="skills-grid">
-            <div *ngFor="let skills of cv.Conocimientos">
-                <span>{{skills.Nombre}}</span>
-                <mat-progress-bar mode="determinate" class="mycolor" value={{skills.Value}}></mat-progress-bar>
+            <div *ngFor="let skills of cv.skills">
+                <span>{{skills.name}}</span>
+                <mat-progress-bar mode="determinate" class="mycolor" value={{skills.value}}></mat-progress-bar>
             </div>
         </mat-card-content>
     </mat-card>

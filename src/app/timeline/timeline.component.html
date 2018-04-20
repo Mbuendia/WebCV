@@ -10,12 +10,12 @@
               <div class="step-milestone" 
               (click)='handleClick($event, i)'></div>
               <span class="step-title date">
-                    {{exp.Fecha_Init | amLocale:'en' | amDateFormat:'MMMM YYYY'}}  to {{exp.Fecha_End | amLocale:'en' | amDateFormat:'MMMM YYYY'}} 
+                    {{exp.dateInit | amLocale:'en' | amDateFormat:'MMMM YYYY'}}  to {{exp.dateEnd | amLocale:'en' | amDateFormat:'MMMM YYYY'}} 
             </span>
               <span class="step-title">
-                   {{exp.Company}}
+                   {{exp.company}}
               </span>
-              <p class="step-description">{{exp.Desc}}</p>
+              <p class="step-description">{{exp.desc}}</p>
             </div>
           </div>  
     </div>

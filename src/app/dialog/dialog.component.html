@@ -1,7 +1,7 @@
 <h1 mat-dialog-title>Techs Used</h1>
 <div mat-dialog-content class="dialog-container">
-    <mat-chip-list *ngFor="let tech of data.selected.Tech_used" aria-orientation="horizontal" 
+    <mat-chip-list *ngFor="let tech of data.selected.techs" aria-orientation="horizontal" 
     class="chip-vertical"> 
-            <mat-chip>{{tech.Nombre}}</mat-chip>
+            <mat-chip>{{tech.name}}</mat-chip>
     </mat-chip-list>
 </div>
