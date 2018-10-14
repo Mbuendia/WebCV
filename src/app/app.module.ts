@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatChipsModule } from '@angular/material/chips';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 import 'hammerjs';
 
@@ -77,7 +78,8 @@ import { SafePipe } from './pipes/safepipe';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : [],
   ],
   providers: [ArticleService, FirebasecvListComponent],
   bootstrap: [AppComponent]
