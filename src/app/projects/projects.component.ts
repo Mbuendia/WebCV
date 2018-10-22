@@ -6,7 +6,7 @@ import { ArticleService } from '../article.service';
 import { Article } from '../article';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {FirebasecvListComponent} from '../firebase/firebasecv-list.component' 
+import { FirebasecvListComponent } from '../firebase/firebasecv-list.component' 
 
 @Component({
   selector: 'app-projects',
